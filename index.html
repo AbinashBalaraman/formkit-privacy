@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — FormKit Studio</title>
+<meta name="description" content="Privacy Policy for FormKit Studio, an offline Android document and photo toolkit. No accounts, no tracking, no data collection." />
+<meta name="theme-color" content="#0f766e" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M9 10h14M9 16h10M9 22h7' stroke='white' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E" />
+<style>
+  :root{
+    --bg:#f6f7f9; --panel:#ffffff; --ink:#151a21; --muted:#5b6673;
+    --line:#e3e7ec; --brand:#0f766e; --brand-2:#115e59; --brand-soft:#e6f4f1;
+    --warn:#8a5a00; --warn-bg:#fff7e6; --radius:14px;
+    --shadow:0 1px 2px rgba(16,24,40,.04),0 12px 32px rgba(16,24,40,.06);
+    --max:1120px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d1117; --panel:#131a22; --ink:#e8edf3; --muted:#9aa7b6;
+      --line:#232c37; --brand:#2dd4bf; --brand-2:#5eead4; --brand-soft:#0f2d2a;
+      --warn:#f2c66d; --warn-bg:#2a210f;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--brand);text-underline-offset:3px}
+  a:hover{color:var(--brand-2)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+  header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar{display:flex;align-items:center;gap:12px;height:64px}
+  .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;flex:0 0 auto}
+  .logo svg{width:19px;height:19px}
+  .brandname{font-weight:750;letter-spacing:-.2px}
+  .brandname small{display:block;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:0}
+  .spacer{flex:1}
+  .pill{font-size:12px;font-weight:600;color:var(--brand);background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 22%,transparent);padding:5px 10px;border-radius:999px;white-space:nowrap}
+
+  .hero{padding:54px 0 30px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand)}
+  .hero h1{font-size:clamp(30px,5vw,46px);line-height:1.1;letter-spacing:-1px;margin:12px 0 12px;font-weight:800}
+  .hero p{max-width:64ch;color:var(--muted);font-size:17px;margin:0}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 12px;box-shadow:var(--shadow)}
+  .dot{width:8px;height:8px;border-radius:50%;background:#16a34a}
+  .meta{margin-top:16px;font-size:13.5px;color:var(--muted)}
+  .meta b{color:var(--ink);font-weight:600}
+
+  main{padding-bottom:80px}
+  .grid{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;align-items:start}
+  @media (max-width:880px){.grid{grid-template-columns:1fr;gap:18px}}
+
+  nav.toc{position:sticky;top:82px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+  nav.toc h2{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  nav.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;counter-reset:t}
+  nav.toc a{display:block;font-size:13.5px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;border-left:2px solid transparent}
+  nav.toc a:hover{color:var(--ink);background:var(--bg)}
+  nav.toc a.active{color:var(--brand);border-left-color:var(--brand);background:var(--brand-soft);font-weight:600}
+  @media (max-width:880px){
+    nav.toc{position:static;order:-1}
+    nav.toc ol{flex-direction:row;flex-wrap:wrap;gap:6px}
+    nav.toc a{border:1px solid var(--line);border-left-width:1px;padding:5px 9px;background:var(--bg)}
+  }
+
+  article{min-width:0}
+  section.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 16px;box-shadow:var(--shadow);scroll-margin-top:84px}
+  section.card h2{font-size:20px;letter-spacing:-.3px;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+  section.card h2 .num{font-size:12px;font-weight:800;color:var(--brand);background:var(--brand-soft);border-radius:7px;padding:3px 8px;letter-spacing:0}
+  section.card p{margin:0 0 10px}
+  section.card p:last-child,section.card ul:last-child{margin-bottom:0}
+  section.card ul{margin:6px 0 10px;padding-left:22px}
+  section.card li{margin:5px 0}
+  strong{font-weight:650}
+
+  .callout{display:flex;gap:12px;background:var(--brand-soft);border:1px solid color-mix(in srgb,var(--brand) 22%,transparent);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout svg{flex:0 0 auto;width:20px;height:20px;color:var(--brand);margin-top:2px}
+  .callout p{margin:0;font-size:14.5px}
+
+  table{width:100%;border-collapse:collapse;margin:10px 0 4px;font-size:14.5px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  tr:last-child td{border-bottom:none}
+  td code,code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em;background:var(--bg);border:1px solid var(--line);padding:1px 5px;border-radius:6px}
+
+  .contact{display:grid;gap:6px;margin-top:6px}
+  .contact a{font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:13.5px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+  .to-top{text-decoration:none;font-weight:600;font-size:13.5px}
+
+  @media print{
+    :root{--bg:#fff;--panel:#fff;--ink:#000;--muted:#333;--line:#bbb;--shadow:none}
+    header.top,nav.toc,.to-top,.badges{display:none!important}
+    .grid{display:block}
+    section.card{border:none;padding:0 0 14px;margin:0 0 12px;break-inside:avoid}
+    .hero{padding:0 0 14px}
+    a{color:#000;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topbar">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 6.5h14M5 12h10M5 17.5h7" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </div>
+    <div class="brandname">FormKit Studio<small>Privacy Policy</small></div>
+    <div class="spacer"></div>
+    <span class="pill">100% offline</span>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <span class="eyebrow">Legal · Privacy</span>
+  <h1>Privacy Policy</h1>
+  <p>FormKit Studio is an offline document and photo toolkit for Android. It processes your files entirely on your device — no account, no servers, no tracking.</p>
+  <div class="badges">
+    <span class="badge"><span class="dot"></span> No data collection</span>
+    <span class="badge"><span class="dot"></span> No account required</span>
+    <span class="badge"><span class="dot"></span> No ads or analytics</span>
+    <span class="badge"><span class="dot"></span> No internet permission</span>
+  </div>
+  <p class="meta"><b>Effective date:</b> 24 November 2026 &nbsp;·&nbsp; <b>App:</b> FormKit Studio &nbsp;·&nbsp; <b>Package:</b> <code>com.formkit.app</code></p>
+</div>
+
+<main class="wrap">
+  <div class="grid">
+    <nav class="toc" aria-label="Contents">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#collect">Information we collect</a></li>
+        <li><a href="#use">How your data is used</a></li>
+        <li><a href="#storage">Local storage</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#sharing">Sharing &amp; third parties</a></li>
+        <li><a href="#retention">Retention &amp; deletion</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#rights">Your choices</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section class="card" id="overview">
+        <h2><span class="num">01</span> Overview</h2>
+        <p>This Privacy Policy explains how <strong>FormKit Studio</strong> (“the app”, “we”, “us”) handles information when you use it. FormKit Studio is a locally installed Android application that resizes photos for exams, IDs, visas and documents, builds printable form sheets, and compresses PDFs.</p>
+        <div class="callout">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><strong>The short version:</strong> the app does not collect, transmit, sell, or share your personal data. Everything you do stays on your device. The app does not request internet access.</p>
+        </div>
+      </section>
+
+      <section class="card" id="collect">
+        <h2><span class="num">02</span> Information we collect</h2>
+        <p><strong>We do not collect any personal information.</strong> FormKit Studio has no user accounts, no sign-in, no server backend, and no analytics or advertising SDKs. We do not receive copies of your documents, photos, forms, or settings.</p>
+        <p>The following stay on your device and are never sent to us:</p>
+        <ul>
+          <li>Images and documents you open, resize, convert, or compress.</li>
+          <li>Form presets, saved fields, and print sheet layouts you create.</li>
+          <li>App settings and preferences.</li>
+        </ul>
+        <p>Because the app has no internet permission, it is technically unable to transmit this information off your device.</p>
+      </section>
+
+      <section class="card" id="use">
+        <h2><span class="num">03</span> How your data is used</h2>
+        <p>Your data is used solely to perform the actions you request — for example, resizing an image to a target DPI or file size, generating a print layout, or compressing a PDF. All processing happens locally on your device. Nothing is uploaded for processing.</p>
+      </section>
+
+      <section class="card" id="storage">
+        <h2><span class="num">04</span> Local storage</h2>
+        <p>To make the app work between sessions, FormKit Studio stores a small amount of data locally on your device:</p>
+        <table>
+          <thead><tr><th>Data</th><th>Where it is stored</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Saved presets and form data</td><td>On-device database (Room)</td><td>Remember the forms and presets you create</td></tr>
+            <tr><td>Preferences and settings</td><td>On-device preferences (DataStore)</td><td>Remember your app settings</td></tr>
+            <tr><td>Exported files</td><td>Wherever you choose via Android’s file picker</td><td>Save your results</td></tr>
+          </tbody>
+        </table>
+        <p>This data is excluded from cloud backup, so it is not sent to Google’s or any other cloud service by the app.</p>
+      </section>
+
+      <section class="card" id="permissions">
+        <h2><span class="num">05</span> Permissions</h2>
+        <p>FormKit Studio requests <strong>no sensitive Android permissions</strong>. When you choose a file, the app uses Android’s system file and photo pickers, which grant one-time access only to the file you select. The app does not browse or scan your storage in the background.</p>
+        <p>In particular, the app does not request internet, location, contacts, camera, microphone, SMS, or call permissions.</p>
+      </section>
+
+      <section class="card" id="sharing">
+        <h2><span class="num">06</span> Sharing &amp; third parties</h2>
+        <p>We do not sell, rent, or share your data with anyone. There are no advertising networks, analytics providers, crash-reporting services, or third-party trackers embedded in the app.</p>
+        <p>If you use Android’s share or “open with” feature to send a file to another app, that action is initiated by you and is governed by the other app’s privacy policy.</p>
+      </section>
+
+      <section class="card" id="retention">
+        <h2><span class="num">07</span> Retention &amp; deletion</h2>
+        <p>Because data is stored only on your device, you control it completely:</p>
+        <ul>
+          <li>Delete individual items inside the app where supported.</li>
+          <li>Clear the app’s storage in <em>Android Settings → Apps → FormKit Studio → Storage → Clear data</em>.</li>
+          <li>Uninstall the app to remove all of its local data.</li>
+        </ul>
+        <p>We cannot retain or delete data we never receive.</p>
+      </section>
+
+      <section class="card" id="children">
+        <h2><span class="num">08</span> Children’s privacy</h2>
+        <p>FormKit Studio is a general-purpose utility and is not directed at children under 13. Because the app collects no personal information from anyone, it does not knowingly collect personal information from children.</p>
+      </section>
+
+      <section class="card" id="security">
+        <h2><span class="num">09</span> Security</h2>
+        <p>Your documents are processed and stored locally, so their security depends primarily on your device’s own protections (screen lock, encryption, and OS updates). We recommend keeping your device updated and using a screen lock. Because no data is transmitted to us, there is no server-side copy to be breached.</p>
+      </section>
+
+      <section class="card" id="rights">
+        <h2><span class="num">10</span> Your choices</h2>
+        <p>You have full control over your data at all times: you can choose which files to open, where to export results, and when to delete app data. Since we hold no personal data about you, there is no request needed to access, correct, or export data from us.</p>
+      </section>
+
+      <section class="card" id="changes">
+        <h2><span class="num">11</span> Changes to this policy</h2>
+        <p>We may update this Privacy Policy if the app’s features or legal requirements change. When we do, we will revise the effective date at the top of this page. Continued use of the app after an update means you accept the revised policy.</p>
+      </section>
+
+      <section class="card" id="contact">
+        <h2><span class="num">12</span> Contact</h2>
+        <p>If you have questions about this Privacy Policy or the app’s privacy practices, contact:</p>
+        <div class="contact">
+          <span><strong>Developer:</strong> Abinash Balaraman</span>
+          <span><strong>Email:</strong> <a href="mailto:support@formkit.app">support@formkit.app</a></span>
+          <span><strong>App:</strong> FormKit Studio (<code>com.formkit.app</code>)</span>
+        </div>
+      </section>
+
+      <p class="to-top"><a href="#">↑ Back to top</a></p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 FormKit Studio. All rights reserved.</span>
+    <span>Last updated 24 November 2026</span>
+  </div>
+</footer>
+
+<script>
+  // Highlight the section currently in view in the table of contents.
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+    var map = {};
+    links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+    var sections = Array.prototype.slice.call(document.querySelectorAll('section.card'));
+    if (!('IntersectionObserver' in window) || !sections.length) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.classList.remove('active'); });
+        var a = map[e.target.id];
+        if (a) a.classList.add('active');
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+    sections.forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
